@@ -1,0 +1,17 @@
+<div>
+    <h2>Dynamic Phone Number Form</h2>
+    
+    <form (ngSubmit)="submitForm()">
+      <div *ngFor="let phoneNumber of phoneNumbers; let i = index">
+        <div class="form-group">
+          <label for="phone{{ i }}">Phone Number {{ i + 1 }}</label>
+          <input type="text" id="phone{{ i }}" class="form-control" [(ngModel)]="phoneNumbers[i]">
+          <button type="button" *ngIf="phoneNumbers.length > 1" (click)="removePhoneNumber(i)">Delete</button>
+        </div>
+      </div>
+      
+      <button type="button" (click)="addPhoneNumber()">Add another phone number</button>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

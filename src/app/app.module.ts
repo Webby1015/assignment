@@ -11,6 +11,12 @@ import { Question4Component } from './question4/question4.component';
 import { SeriesComponent } from './series/series.component';
 import { XComponent } from './x-component/x-component.component';
 import { YComponent } from './y-component/y-component.component';
+import { DynamicPhoneFormComponent } from './dynamic-phone-form/dynamic-phone-form.component';
+import { BottomLeftComponent } from './bottom-left/bottom-left.component';
+import { BottomRightComponent } from './bottom-right/bottom-right.component';
+import { CenterComponent } from './center/center.component';
+import { TopLeftComponent } from './top-left/top-left.component';
+import { TopRightComponent } from './top-right/top-right.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,13 @@ import { YComponent } from './y-component/y-component.component';
     Question4Component,
     SeriesComponent,
     XComponent,
-    YComponent
+    YComponent,
+    DynamicPhoneFormComponent,
+    BottomLeftComponent,
+    BottomRightComponent,
+    CenterComponent,
+    TopLeftComponent,
+    TopRightComponent
   ],
   imports: [
     BrowserModule,
