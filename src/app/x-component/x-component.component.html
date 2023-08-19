@@ -1,0 +1,13 @@
+<button (click)="addX()">Add Component X</button>
+<div *ngFor="let x of xComponents; let xIndex = index" class="x-panel">
+  <div>
+    <input type="text" [(ngModel)]="x.name" (change)="saveX(xIndex)">
+    <button (click)="addY(xIndex)">+</button>
+  </div>
+  <div>
+    <div *ngFor="let y of x.ys; let yIndex = index">
+      <app-y-component [yData]="y" (yDataSaved)="saveY(xIndex, yIndex)"></app-y-component>
+    </div>
+  </div>
+</div>
+<button (click)="downloadJsonFile()">Download JSON</button>
